@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Alley</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<audio id="bgMusic" loop preload="auto">
+  <source src="jvke-her.mp3" type="audio/mpeg">
+</audio>
+
+<div id="petals"></div>
+
+<div class="container">
+  <div class="glow-name">✨ Alley ✨</div>
+
+  <div id="poem">
+    <!-- Lines injected by JS -->
+  </div>
+
+  <div class="nav-buttons">
+    <button onclick="location.href='about.html'">Continue →</button>
+  </div>
+</div>
+
+<script src="music.js"></script>
+<script src="petals.js"></script>
+
+<script>
+const lines = [
+  "Shakespeare once said…",
+  "Love doesn’t enter quietly.",
+  "It invades your senses.",
+  "It colors every thought with her name.",
+  "It isn’t seen — it’s felt.",
+  "And suddenly… everything is her.",
+  "But in my own words…",
+  "You are the storm that I willingly walk into.",
+  "The fire I touch without fear of the burn.",
+  "I do not seek peace where you exist,",
+  "For in your presence, I’ve found a sweeter kind of ruin.",
+  "You live in the quiet spaces of my mind,",
+  "Where logic kneels before longing.",
+  "And love ceases to be a choice.",
+  "If loving you is a mistake, let eternity be my sentence.",
+  "For some souls meet not to be completed, but to be consumed.",
+  "And I — knowing this — would still choose the fire again and again."
+];
+
+const poem = document.getElementById("poem");
+
+lines.forEach((text, i) => {
+  const line = document.createElement("div");
+  line.className = "poem-line";
+  line.style.animationDelay = `${i * 2}s`;
+  line.textContent = text;
+  poem.appendChild(line);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>One Question</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<audio id="bgMusic" loop preload="auto">
+  <source src="jvke-her.mp3" type="audio/mpeg">
+</audio>
+
+<div id="petals"></div>
+
+<div class="container question-card">
+
+  <h1>So… here it is</h1>
+
+  <p>
+    Alley, I know asking this might feel sudden.  
+    Maybe even a little bold.
+  </p>
+
+  <p>
+    But everything before this  
+    was me being honest with my heart.
+  </p>
+
+  <p>
+    I don’t want something rushed.  
+    I don’t want something shallow.  
+    And I don’t want anything that isn’t real.
+  </p>
+
+  <div class="climax-line">
+    ✨ Then it’s you. ✨
+  </div>
+
+  <p>
+    Not just as a title,  
+    but as someone I grow with,  
+    choose daily,  
+    and protect intentionally.
+  </p>
+
+  <blockquote class="verse">
+    “Above all, love each other deeply,  
+    because love covers over a multitude of sins.”  
+    <span>— 1 Peter 4:8</span>
+  </blockquote>
+
+  <p class="final-question">
+    Are you willing to spend the time we’re given on this earth  
+    exploring what could be an <em>“us”</em>?
+  </p>
+
+  <div class="buttons">
+    <button class="yes-btn" onclick="yes()">Yes</button>
+    <button class="no-btn" onmouseover="runAway(this)">No</button>
+  </div>
+
+</div>
+
+<script src="music.js"></script>
+<script src="petals.js"></script>
+
+<script>
+function runAway(btn) {
+  btn.style.position = "relative";
+  btn.style.left = Math.random() * 200 - 100 + "px";
+  btn.style.top = Math.random() * 100 - 50 + "px";
+}
+
+function yes() {
+  document.body.innerHTML = `
+    <div id="petals"></div>
+    <div class="container divine-ending">
+      <h1>Then it’s you.</h1>
+      <p>Always has been.</p>
+      <p>And always will be.</p>
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
